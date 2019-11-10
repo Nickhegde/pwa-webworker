@@ -35,7 +35,7 @@ class Home extends Component {
   };
 
   fetchWebWorker = () => {
-      console.log("WEb Worker")
+    console.log("WEb Worker")
     this.worker.postMessage("");
 
     this.worker.addEventListener("message", event => {
@@ -44,6 +44,10 @@ class Home extends Component {
       });
     });
   };
+
+  webCallback = () => {
+    window.location.reload();
+  }
 
   componentDidMount = () => {
     this.worker = new WebWorker(worker);
@@ -54,26 +58,27 @@ class Home extends Component {
       <div className="App-bottom">
         <section className="App-left">
           <ReactCountdownClock
-            seconds={100}
+            seconds={50}
             color="#000"
             alpha={0.9}
             size={200}
           />
           <p className="text-center">Total User Count: {this.state.count}</p>
-          <button className="btn-direct" onClick={this.fetchUsers}>
+          <button className="btn-style btn-direct" onClick={this.fetchUsers}>
             Fetch Users Directly
           </button>
         </section>
 
         <section className="App-right">
           <ReactCountdownClock
-            seconds={100}
+            seconds={50}
             color="#e56"
             alpha={0.9}
             size={200}
+            onComplete={this.webCallback}
           />
           <p className="text-center">Total User Count: {this.state.count}</p>
-          <button className="btn-worker" onClick={this.fetchWebWorker}>
+          <button className="btn-style btn-worker" onClick={this.fetchWebWorker}>
             Fetch Users with Web Worker
           </button>
         </section>
