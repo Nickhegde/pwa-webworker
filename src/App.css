@@ -9,62 +9,60 @@
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 100px;
   padding: 20px;
   color: white;
 }
 
 .App-bottom {
-  margin-top: 20px;
+  padding-top: 20px;
   background: url('https://cloud.addictivetips.com/wp-content/uploads/2018/04/Background-Check-research-1024x682.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.App-title {
-  font-size: 1.5em;
+  height:inherit;
 }
 
 .App-intro {
   font-size: large;
+  height:100vh;
 }
 
-.App-left {
-  width: 50%;
+.App-left , .App-right {
+  width: 100%;
   display: inline-block;
+  display: flex;
+  justify-content: center; 
 }
 
-.App-right {
-  width: 50%;
+.App-left  {
+  margin-bottom: 100px;
+}
+.text-center {
+  text-align: center;
+  margin-left: 130px;
   display: inline-block;
+  margin-top:auto;
+  margin-bottom: auto;
 }
-
-.btn-direct {
-  background-color: #ddd;
+.btn-style{
   color: #fff;
   padding: 10px 20px;
   border: none;
   font-size: 15px;
   border-radius: 2px;
-  margin-top: 50px;
   cursor: pointer;
+  margin-left:30px;
+  margin-top:auto;
+  margin-bottom: auto;
+  height:50px;
+}
+.btn-direct {
+  background-color:black;
 }
 .btn-worker {
   background-color: #e56;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  font-size: 15px;
-  border-radius: 2px;
-  margin-top: 50px;
-  cursor: pointer;
 }
-.text-center {
-  width: fit-content;
-  text-align: center;
-  margin-left: 130px;
 
-}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
