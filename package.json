@@ -6,7 +6,7 @@
     "react": "^16.8.1",
     "react-countdown-clock": "^2.5.0",
     "react-dom": "^16.8.1",
-    "react-scripts": "2.1.5"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
